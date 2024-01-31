@@ -20,8 +20,35 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       child: Column(
         children: [
           CoustomAppBar(),
-          CoustomPhotoListView(),
+          FeaturedBooksListView()
         ],
+      ),
+    );
+  }
+}
+
+class FeaturedBooksListView extends StatefulWidget {
+  const FeaturedBooksListView({super.key});
+
+  @override
+  State<FeaturedBooksListView> createState() => _FeaturedBooksListViewState();
+}
+
+class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * .25,
+
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context,index){
+
+      return const Padding(
+        padding:   EdgeInsets.only(left: 6,right: 6),
+        child: CoustomPhotoListView(),
+      );
+      }
       ),
     );
   }
