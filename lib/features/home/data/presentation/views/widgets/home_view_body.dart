@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'coustom_app_bar.dart';
+import 'coustom_listview_images.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
@@ -16,9 +17,10 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
-      child:  Column(
+      child: Column(
         children: [
-          CoustomAppBar()
+          CoustomAppBar(),
+          CoustomPhotoListView(),
         ],
       ),
     );
